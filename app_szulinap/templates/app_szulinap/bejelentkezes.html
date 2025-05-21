@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -5,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejelentkezés</title>
+    <link rel="stylesheet" href="{%static 'app_szulinap/bejelentkezes.css'%}">
 </head>
+
 <body>
-    
+    {% csrf_token %}
+    <header>
+        <h1> Bejelentkezés </h1>
+    </header>
+    <table>
+        <tr>
+            <td>Felhasználónév:</td>     
+        </tr>
+        <tr>
+            <td>Jelszó:</td>
+        </tr>
+    </table>
     
 </body>
 </html>
