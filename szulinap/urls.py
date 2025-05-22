@@ -22,5 +22,5 @@ from app_szulinap.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('reg/', reg)
+    path('fooldal/', fooldal)
 ]
