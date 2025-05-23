@@ -7,3 +7,7 @@ def index(request):
 
 def fooldal(request):
     return render(request, 'app_szulinap/fooldal.html')
+
+
+def ujember(request):
+    return render(request, 'app_szulinap/ujember.html')
