@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Ember(models.Model):
-    teljesnev = models.CharField(_max_length=255)
-    becenev = models.CharField(_max_length=255)
+    teljesnev = models.CharField(max_length=255)
+    becenev = models.CharField(max_length=255)
     szulinap = models.DateField()
     nevnap = models.DateField()
     ajandek = models.CharField(max_length=255)
