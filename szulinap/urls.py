@@ -24,4 +24,6 @@ urlpatterns = [
     path('', index),
     path('fooldal/', fooldal),
     path('ujember/', ujember),
+    path('ujember/kuld/', kuld),
+
 ]

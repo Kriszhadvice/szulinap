@@ -30,3 +30,6 @@ def feldolgoz(request):
     print('Beolvasás vége')
     
     return render (request, 'app_szulinap/kuld.html')
+
+def kuld(request):
+    return render(request, 'app_szulinap/kuld.html')
