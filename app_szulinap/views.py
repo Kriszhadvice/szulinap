@@ -33,3 +33,7 @@ def feldolgoz(request):
 
 def kuld(request):
     return render(request, 'app_szulinap/kuld.html')
+
+
+def profil(request):
+    return render(request, 'app_szulinap/profil.html')
