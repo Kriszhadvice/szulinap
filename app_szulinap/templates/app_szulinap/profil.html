@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismerős Adatai</title>
+    <link rel="stylesheet" href="{%static 'app_szulinap/profil.css'%}">
+</head>
+<body>
+    {% csrf_token %}
+    <header>
+        <h1>Ismerős Adatai:</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Megváltoztathatod az ajándékötletet</h2>
+        </section>
+        <section>
+            <table>
+                <tr>
+                    <td>Becenév:</td> 
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Teljes név:</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Születésnap:</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Névnap:</td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ajándékötlet:</td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <button>
+            Ismerős törlése
+        </button>
+    </footer>
+</body>
+</html>

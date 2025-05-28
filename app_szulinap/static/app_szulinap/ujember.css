@@ -1,13 +1,38 @@
-*{
-    color: black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: lightgray;
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
 }
 
-header h1{
-    text-align: center;
-    padding: 25px;
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
 
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.message-button {
+    background-color: #2bb3c0;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+    background-color: #2397a3;
 }
