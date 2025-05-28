@@ -7,6 +7,21 @@
 }
 header h1{
     text-align: center;
-    padding: 25px;
+    padding: 45px;
+
+}
+body{
+    display: grid;
+}
+
+a{
+    justify-content: center;
+    text-align: center;
+    margin: 15px;
+    text-decoration: none;
+    background-color: rgb(46,188,231);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(46, 188, 231);
 
 }
