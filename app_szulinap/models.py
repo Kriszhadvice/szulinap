@@ -7,7 +7,7 @@ class Ember(models.Model):
     becenev = models.CharField(max_length=255)
     szulinap = models.DateField()
     nevnap = models.DateField()
-    ajandek = models.CharField(max_length=255)
+    ajandek = models.CharField(max_length=255, null=True, blank=True)
     
 
     class Meta:
@@ -15,7 +15,7 @@ class Ember(models.Model):
         verbose_name_plural = "Emberek"
 
     def __str__(self):
-        return self.becenev, self.szulinap, self.nevnap
+        return f'{self.teljesnev}, {self.becenev}, {self.szulinap}, {self.nevnap}, {self.ajandek}'
 
     def letrehozas_sor_alapjan(sor):
         sor = sor.strip()
