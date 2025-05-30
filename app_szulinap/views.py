@@ -15,7 +15,7 @@ def ujember(request):
     return render(request, 'app_szulinap/ujember.html')
 
 
-def feldolgoz(request):
+def kuld(request):
     if request.method != 'POST':
         return HttpResponse('Ez nem post request')
     if 'szoveg' not in request.POST.keys():
@@ -30,10 +30,6 @@ def feldolgoz(request):
     print('Beolvasás vége')
     
     return render (request, 'app_szulinap/kuld.html')
-
-def kuld(request):
-    return render(request, 'app_szulinap/kuld.html')
-
 
 def profil(request):
     return render(request, 'app_szulinap/profil.html')
