@@ -16,6 +16,7 @@ header h1 {
 }
 
 form {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,4 +67,9 @@ a{
     box-shadow: 5px 5px 10px red; 
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+p{
+    font-size: 1.2em;
+    margin:4px;
 }

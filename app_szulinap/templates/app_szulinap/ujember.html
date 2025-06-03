@@ -10,10 +10,13 @@
 <body>
     <header><h1>Emberek Hozzáadása</h1></header>
     <a href="/"> Vissza a főoldalra!</a>
+    <p>Add meg ismerőseid adatait a következő módon: "Nagy Péter, Petike,2007-08-08,2000-04-03, ajandek".</p>
+    <p>Ajéndokat nem kötelező még hozzáadnod. </p>
     <form action="kuld/" method="POST">
         {% csrf_token %}
         <textarea name="szoveg" id="szoveg"></textarea>
         <button type="submit">Hozzáadás</button>
     </form>
+
 </body>
 </html>

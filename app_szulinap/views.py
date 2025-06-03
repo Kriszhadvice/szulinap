@@ -33,3 +33,4 @@ def kuld(request):
 
 def profil(request):
     return render(request, 'app_szulinap/profil.html')
+
