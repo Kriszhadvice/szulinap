@@ -43,8 +43,9 @@ def fooldal(request):
         else:
             datum = ember.nevnap.strftime("%m.%d") + " (névnap)"
         ember_adatok.append({
+            'id': ember.id,
             'becenev': ember.becenev,
-            'datum': datum
+            'datum': datum,
         })
 
     return render(request, 'app_szulinap/fooldal.html', {
@@ -71,6 +72,7 @@ def kuld(request):
     
     return render (request, 'app_szulinap/kuld.html')
 
-def profil(request):
+def profil(request, emberid:int):
+    ember = Ember.objects.get(id=emberid)
     
     return render(request, 'app_szulinap/profil.html')
