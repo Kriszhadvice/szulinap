@@ -22,7 +22,7 @@ class Ember(models.Model):
         if not sor:
             return
         sor = sor.split(',')
-        ember, is_created= Ember.objects.get_or_create(teljesnev = sor[0], becenev = sor[1], szulinap = sor[2], nevnap = sor[3], ajandek = [4])
+        ember, is_created= Ember.objects.get_or_create(teljesnev = sor[0], becenev = sor[1], szulinap = sor[2], nevnap = sor[3], ajandek = sor[4])
         return ember
     
 

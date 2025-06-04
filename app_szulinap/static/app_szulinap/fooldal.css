@@ -21,12 +21,14 @@ main{
     gap: 50px;
     justify-content: center;
 }
-
+p{
+    color:whitesmoke;
+    background-color: rgb(31, 147, 160);
+}
 div{
     text-align: center;
     padding: 15px;
     background-color: rgb(31, 147, 160);
-    color:whitesmoke;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(46, 188, 231);
 }
