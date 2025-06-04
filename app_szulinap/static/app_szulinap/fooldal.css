@@ -33,9 +33,14 @@ div{
     box-shadow: 5px 5px 10px rgb(46, 188, 231);
 }
 
+.sor{
+    margin-bottom: 120px;
+}
+
 footer{
+    position:fixed;
+    margin-top: 50px;
     background-color: white;
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: 80px;
@@ -44,7 +49,11 @@ footer{
     display: grid;
 }
 
-a{
+main a{
+    text-decoration: none;
+}
+
+footer a{
     margin: 15px;
     text-decoration: none;
     background-color: rgb(46,188,231);

@@ -13,12 +13,16 @@
     <header><h1>Közelgő Események</h1></header>
     <main>
     {% for ember in emberek %}
-        <div>
-            <p>{{ ember.becenev }}</p>
-            <p>{{ ember.datum }}</p>
-        </div>
-    {% endfor %}
-</main>
+        <a href="profil/">
+            <div>
+                <p >{{ ember.becenev }}</p>
+                <p>{{ ember.datum }}</p>
+            </div>
+            {% endfor %}
+        </a>
+    
+    </main>
+    <p class="sor">    </p>
     <footer>
         <a href="ujember/"> Ismerős Hozzáadása</a>
     </footer>
