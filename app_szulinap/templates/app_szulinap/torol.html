@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Törölted az ismerőst</title>
+    <link rel="stylesheet" href="{%static 'app_szulinap/torol.css'%}">
+</head>
+<body>
+    {% csrf_token %}
+    <header><h1>Sikeresen törölted az ismerősödet!</h1></header>
+    <footer>
+        <a href="/"> Vissza a főoldalra!</a>
+    </footer>
+</body>
+</html>

@@ -26,5 +26,6 @@ urlpatterns = [
     path('ujember/', ujember),
     path('ujember/kuld/', kuld),
     path('profil/<int:emberid>/', profil),
+    path('profil/<int:emberid>/torol/', torol),
 
 ]

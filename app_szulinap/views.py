@@ -63,7 +63,7 @@ def kuld(request):
         return HttpResponse('nem jött post request')
     
 
-    sorok = request.POST['szoveg'].split('\n')[1:]
+    sorok = request.POST['szoveg'].split('\n')
 
     for sor in sorok:
         Ember.letrehozas_sor_alapjan(sor)
@@ -73,6 +73,17 @@ def kuld(request):
     return render (request, 'app_szulinap/kuld.html')
 
 def profil(request, emberid:int):
+    
     ember = Ember.objects.get(id=emberid)
     
-    return render(request, 'app_szulinap/profil.html')
+    context = {
+        'szulinap': ember.szulinap.strftime("%m-%d"),
+        'nevnap': ember.nevnap.strftime("%m-%d"),
+        'ember': ember,
+    }
+    return render(request, 'app_szulinap/profil.html', context)
+
+def torol(request, emberid:int):
+    ember = Ember.objects.get(id=emberid)
+    ember.delete()
+    return render(request, 'app_szulinap/torol.html')
