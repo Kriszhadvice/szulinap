@@ -42,10 +42,22 @@ def fooldal(request):
             datum = ember.szulinap.strftime("%m.%d") + " (szülinap)"
         else:
             datum = ember.nevnap.strftime("%m.%d") + " (névnap)"
+
+    
+        if (kozelebbi_datum<7):
+            if(ember.ajandek):
+                heti 
+            else:        
+        elif(kozelebbi_datum<30):
+        
+        
         ember_adatok.append({
             'id': ember.id,
             'becenev': ember.becenev,
             'datum': datum,
+            'havi': havi,
+            'surgos': surgos,
+            'heti': heti,
         })
 
     return render(request, 'app_szulinap/fooldal.html', {

@@ -13,7 +13,17 @@
     <header><h1>Közelgő Események</h1></header>
     <main>
     {% for ember in emberek %}
-        <a href="profil/{{ ember.id }}/">
+        <a href="profil/{{ ember.id }}/" 
+            {% if ember.havi %}
+            class="havi"
+            {% endif %}
+            {% if ember.surgos %}
+            class="surgos"
+            {% endif %}
+            {% if ember.heti %}
+            class="heti"
+            {% endif %}
+        >
             <div>
                 <p >{{ ember.becenev }}</p>
                 <p>{{ ember.datum }}</p>
