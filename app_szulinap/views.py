@@ -61,7 +61,7 @@ def fooldal(request):
         if 7 < diff < 31:
             havi = True
             print("Havi igaz")
-        if ember.ajandek == True and diff < 8:
+        if ember.ajandek and diff < 8:
             heti = True   
             print("heti igaz")
         if diff < 8:
