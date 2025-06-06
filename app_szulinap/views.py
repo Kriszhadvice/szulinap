@@ -43,21 +43,38 @@ def fooldal(request):
         else:
             datum = ember.nevnap.strftime("%m.%d") + " (névnap)"
 
-    
-        if (kozelebbi_datum<7):
-            if(ember.ajandek):
-                heti 
-            else:        
-        elif(kozelebbi_datum<30):
-        
-        
+        szuli_diff = (szuli - maidatum).days if (szuli - maidatum).days >= 0 else (szuli - maidatum).days + 365
+        nev_diff = (nev - maidatum).days if (nev - maidatum).days >= 0 else (nev - maidatum).days + 365
+
+
+
+        if szuli_diff <= nev_diff:
+            datum = ember.szulinap.strftime("%m.%d") + " (szülinap)"
+            diff = szuli_diff
+        else:
+            datum = ember.nevnap.strftime("%m.%d") + " (névnap)"
+            diff = nev_diff  
+      
+        heti = False
+        havi = False
+        surgos = False
+        if 7 < diff < 31:
+            havi = True
+            print("Havi igaz")
+        if ember.ajandek == True and diff < 8:
+            heti = True   
+            print("heti igaz")
+        if diff < 8:
+            surgos = True 
+            print("surgos igaz")
+
         ember_adatok.append({
             'id': ember.id,
             'becenev': ember.becenev,
             'datum': datum,
-            'havi': havi,
-            'surgos': surgos,
             'heti': heti,
+            'surgos': surgos,
+            'havi': havi,
         })
 
     return render(request, 'app_szulinap/fooldal.html', {
