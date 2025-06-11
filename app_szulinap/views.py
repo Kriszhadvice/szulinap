@@ -55,19 +55,18 @@ def fooldal(request):
             datum = ember.nevnap.strftime("%m.%d") + " (névnap)"
             diff = nev_diff  
       
+        alap = False      
         heti = False
         havi = False
         surgos = False
         if 7 < diff < 31:
             havi = True
-            print("Havi igaz")
-        if ember.ajandek and diff < 8:
+        elif ember.ajandek  and diff < 8:
             heti = True   
-            print("heti igaz")
-        if diff < 8:
+        elif diff < 8:
             surgos = True 
-            print("surgos igaz")
-
+        else:
+            alap = True
         ember_adatok.append({
             'id': ember.id,
             'becenev': ember.becenev,
@@ -75,6 +74,7 @@ def fooldal(request):
             'heti': heti,
             'surgos': surgos,
             'havi': havi,
+            'alap': alap,
         })
 
     return render(request, 'app_szulinap/fooldal.html', {
