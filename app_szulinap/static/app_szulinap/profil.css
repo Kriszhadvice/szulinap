@@ -17,7 +17,7 @@ h2{
     margin-top: 25px;
 }
 
-table{
+main table{
     color:whitesmoke;
     margin-left: 150px;
     font-size: 25px;
@@ -26,12 +26,21 @@ table{
     justify-content: left;
     text-align: center;
 }
-td{
+main table td{
     
     padding: 10px;
     background-color: rgb(31, 147, 160);
     border-radius: 5px;
 }
+
+footer table{
+    background-color: white;
+}
+
+footer table td{
+    background-color: white;
+}
+
 footer{
     background-color: white;
     position: fixed;
@@ -42,9 +51,21 @@ footer{
     justify-content: center;
     display: grid;
 }
-a{
+.vissza{
     color:whitesmoke;
-    font-size: 20px;
+    margin: 15px;
+    text-decoration: none;
+    background-color: rgb(46,188,231);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(46, 188, 231);
+    transition: background-color 0.3s ease;
+}
+.vissza:hover{
+    background-color: #0277bd;
+}
+.torol{
+    color:whitesmoke;
     margin: 15px;
     border: none;
     padding: 25px;
@@ -53,9 +74,36 @@ a{
     padding: 15px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px red; 
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
-a:hover {
+.torol:hover {
     background-color: #cc1818;
+}
+
+button{
+    padding: 3px;
+    border-color: whitesmoke;
+    height: 30px;
+    color: whitesmoke;
+    background-color: rgb(31, 147, 160);
+    font-size: 0.7em;
+}
+
+form{
+    background-color: rgb(31, 147, 160);
+    color: whitesmoke;
+}
+input{
+    color:whitesmoke;
+    background-color: rgb(31, 147, 160);
+    height: 30px;
+    width: 150px;
+    border-color: whitesmoke;
+    font-size: 20px;
+}
+
+::placeholder{
+    color:whitesmoke;
+    text-align: center;
+    font-style: italic;
 }

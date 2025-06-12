@@ -1,5 +1,4 @@
 *{
-    color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: lightgray;
     padding: 0;
@@ -7,6 +6,7 @@
 }
 
 header h1{
+    color:black;
     text-align: center;
     padding: 25px;
 
@@ -54,17 +54,18 @@ main a{
 }
 
 footer a{
+    border-radius: 5px;
+    padding: 15px;
     margin: 15px;
     text-decoration: none;
+    color:whitesmoke;
     background-color: rgb(46,188,231);
-    padding: 15px;
-    border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(46, 188, 231);
     transition: background-color 0.3s ease;
 }
 
 footer a:hover {
-    background-color: rgb(52, 178, 228);
+    background-color:  #0277bd;
 }
 
 .havi{

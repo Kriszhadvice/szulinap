@@ -41,7 +41,7 @@ textarea {
 button {
     background-color: rgb(46,188,231);
     box-shadow: 5px 5px 10px rgb(46, 188, 231);
-    color: white;
+    color: whitesmoke;
     padding: 18px;
     border-radius: 5px;
     font-size: 20px;
@@ -65,13 +65,18 @@ footer{
     display: grid;
 }
 a{
+    transition: background-color 0.3s ease;
     margin: 15px;
     text-decoration: none;
-    background-color: rgb(31, 147, 160);
+    background-color: rgb(46,188,231);
+    box-shadow: 5px 5px 10px rgb(46, 188, 231);
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgb(31, 147, 160);
-    color: white;
+    color: whitesmoke;
+}
+
+a:hover {
+    background-color: #0277bd;
 }
 
 p{

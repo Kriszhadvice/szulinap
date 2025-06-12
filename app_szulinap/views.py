@@ -101,16 +101,21 @@ def kuld(request):
     
     return render (request, 'app_szulinap/kuld.html')
 
-def profil(request, emberid:int):
-    
+def profil(request, emberid: int):
     ember = Ember.objects.get(id=emberid)
-    
+
+    if request.method == 'POST':
+        uj_ajandek = request.POST.get('ajandek', '').strip()
+        ember.ajandek = uj_ajandek
+        ember.save()
+
     context = {
         'szulinap': ember.szulinap.strftime("%m-%d"),
         'nevnap': ember.nevnap.strftime("%m-%d"),
         'ember': ember,
     }
     return render(request, 'app_szulinap/profil.html', context)
+
 
 def torol(request, emberid:int):
     ember = Ember.objects.get(id=emberid)

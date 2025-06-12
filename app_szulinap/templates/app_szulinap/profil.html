@@ -44,17 +44,27 @@
                 </tr>
                 <tr>
                     <td>Ajándékötlet:</td>
-                    <td>                   
-                        {{ ember.ajandek }}
+                    <td>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="text" name="ajandek" value="{{ ember.ajandek }}" placeholder="Ajándék" />
+                            <button type="submit">Mentés</button>
+                        </form>
                     </td>
                 </tr>
             </table>
         
     </main>
     <footer>
-        <a href="torol/">
-            Ismerős Törlése
-        </a>
+        <table>
+            <td>
+                <a href="/" class="vissza"> Vissza a főoldalra!</a>
+            </td>
+            <td>
+                <a href="torol/" class="torol">Ismerős Törlése</a>
+            </td>
+        </table>
+        
     </footer>
 </body>
 </html>
