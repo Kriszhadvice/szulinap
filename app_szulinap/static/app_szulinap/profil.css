@@ -94,6 +94,7 @@ form{
     color: whitesmoke;
 }
 input{
+    text-align: center;
     color:whitesmoke;
     background-color: rgb(31, 147, 160);
     height: 30px;

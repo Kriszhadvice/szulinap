@@ -6,6 +6,7 @@
     margin: 0;
 }
 header h1{
+    margin-top: 220px;
     text-align: center;
     padding: 45px;
 
@@ -26,14 +27,20 @@ footer{
 }
 
 a{
+    color:whitesmoke;
     margin: 15px;
     text-decoration: none;
     background-color: rgb(46,188,231);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(46, 188, 231);
-
+    transition: background-color 0.3s ease;
 }
+
+a:hover{
+    background-color: #0277bd;
+}
+
 p{
     width: 100%;
     text-align: center;
